@@ -21,8 +21,9 @@ function initMap() {
     };
     console.log(location);
     var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 1,
+        zoom: 2,
         center: location
+        
     });
     
     var marker = new google.maps.Marker( {
