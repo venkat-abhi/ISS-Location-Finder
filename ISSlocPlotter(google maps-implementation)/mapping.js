@@ -9,26 +9,34 @@ var latitude, longitude;
 function LocationData(data) {
     latitude = parseFloat(data.iss_position.latitude);
     longitude = parseFloat(data.iss_position.longitude);
-    console.log(latitude,longitude);
-    initMap();
+    //console.log(latitude,longitude);
+    initMap(latitude,longitude);
 }
 
-function initMap() {
+function initMap(lat_label,lng_label) {
+    
     var location = {
         lat: +latitude,
         lng: +longitude
         
     };
-    console.log(location);
+    
     var map = new google.maps.Map(document.getElementById("map"), {
         zoom: 2,
-        center: location
-        
+        center: location 
     });
+
+    l1 = parseFloat(lat_label).toString()
+    l2 = parseFloat(lng_label).toString()
     
-    var marker = new google.maps.Marker( {
+    var marker = new google.maps.Marker({
         position: location,
         map: map,
-    });
-    console.log(marker.position);
+      });
+    
+    var infowindow = new google.maps.InfoWindow({
+        content:"Latitude: " + l1 + '<br>Longitude: ' + l2
+     });
+    infowindow.open(map,marker);
+   
 }
