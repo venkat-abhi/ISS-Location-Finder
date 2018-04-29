@@ -11,4 +11,5 @@ In order to use the Google maps implementation, users must obtain an API key for
 ```
 
 ###output
+![](gmaps_output.png )
 
