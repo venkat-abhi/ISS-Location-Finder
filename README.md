@@ -14,6 +14,8 @@ In order to use the Google maps implementation, users must obtain an API key for
 __Google maps implementation__
 ![](gmaps_output.png )
 
+
 __Python implementation__
+
 ![](pyimp_output.png)
 
