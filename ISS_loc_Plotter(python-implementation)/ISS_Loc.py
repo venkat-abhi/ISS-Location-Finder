@@ -6,7 +6,7 @@ import urllib.request
 url_PeopleOnIss = 'http://api.open-notify.org/astros.json'
 response=urllib.request.urlopen(url_PeopleOnIss)
 result = json.loads(response.read())
-print("Number of people on board the ISS:",result['number'])
+print("The number of people on board the ISS :",result['number'])
 astronaut_names=result['people']
 for names in astronaut_names:
     print(names)
